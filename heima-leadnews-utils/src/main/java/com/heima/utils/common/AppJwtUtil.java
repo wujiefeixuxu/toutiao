@@ -101,10 +101,10 @@ public class AppJwtUtil {
     }
 
     public static void main(String[] args) {
-        String token = AppJwtUtil.getToken(1L);
+        String token = AppJwtUtil.getToken(100L);
         System.out.println(token);
         try {
-            Claims claimsBody = getClaimsBody("eyJhbGciOiJIUzUxMiIsInppcCI6IkdaSVAifQ.H4sIAAAAAAAAADWLQQqEMAwA_5KzhbQ0tvU3kUa2glBIBUX27xsPe5thmAf20WAB9MKSSnJr5uwiVnRMJTgsknIi2raIMEHjAYufA4USKc4T6LnarbcOOd6uavqRdrAZn9WMezeWq__P7N-zWfPfH6YheqeAAAAA.btWGNZaYIHoGm_RDZAE2Gg9kJWf_qXo0o7XWzozySwcXnX2n-dHKmqmrSrTnl-iPwU6BcydOQDMXWRxfVZpcUQ");
+            Claims claimsBody = getClaimsBody(token);
             int i = verifyToken(claimsBody);
             if(i<1){
 

@@ -9,8 +9,10 @@ import java.io.Serializable;
  */
 @Data
 public class PageResponseResult extends ResponseResult implements Serializable {
-    private Integer currentPage;  // 当前页码
-    private Integer size; // 一页显示记录
+    // 当前页码
+    private Integer currentPage;
+     /*一页显示记录*/
+    private Integer size;
     private Long total; // 总记录
 
     public PageResponseResult(Integer currentPage, Integer size, Long total) {

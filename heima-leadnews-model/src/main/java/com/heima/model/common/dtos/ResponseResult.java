@@ -7,6 +7,7 @@ import lombok.Setter;
 
 import java.io.Serializable;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -106,5 +107,8 @@ public class ResponseResult<T> implements Serializable {
         System.out.println("错误的响应:");
         System.out.println(JSON.toJSONString(ResponseResult.errorResult(AppHttpCodeEnum.DATA_EXIST)));
         new PageResponseResult(1,10,29L,new ArrayList<>());
+//        PageResponseResult pageResponseResult = new PageResponseResult(1, 10, 80L, Arrays.asList("1111", "22222", "3333"));
+//        System.out.println(JSON.toJSONString(pageResponseResult));
+
     }
 }
